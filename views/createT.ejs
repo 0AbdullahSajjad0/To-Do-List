@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Create A Task</h1>
+<form action="/submit" method="POST">
+  <input name="category" type="text" class="feedback-input" placeholder="Category (Daily/Work)" />
+  <textarea name="task" class="feedback-input" placeholder="Task"></textarea>
+  <input type="submit" value="Create" />
+</form>
+
+<%- include("partials/footer.ejs") %>

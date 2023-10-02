@@ -1,0 +1,69 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container px-4 py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom">Tasks</h2>
+  <div class="row g-4 row-cols-1 row-cols-lg-2">
+    <div class="feature col">
+      <h3 class="fs-2 text-body-emphasis">Daily Tasks</h3>
+      <% if (locals.lengthD) { %>
+        <ul style="list-style-type:none;">
+          <% for( var index = 0; index < lengthD; index++) { %>
+            <li>
+              <label class="container"><%= dailyTasks[index] %>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </li>
+          <% } %>
+        </ul>
+      <% } else { %>
+        <p>
+          Create Task To Display  
+        </p>
+      <% } %>
+    </div>
+    <div class="feature col">
+      <h3 class="fs-2 text-body-emphasis">Work Tasks</h3>
+      <% if (locals.lengthW) { %>
+        <ul style="list-style-type:none;">
+          <% for( var index = 0; index < lengthW; index++) { %>
+            <li>
+              <label class="container"><%= workTasks[index] %>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </li>
+          <% } %>
+        </ul>
+      <% } else { %>
+        <p>
+          Create Task To Display  
+        </p>
+      <% } %>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 
+<h1>Tasks</h1>
+<img class="profile" src="images/Plan.jpg" alt="cat profile">
+<p>
+  Quam purus justo enim purus, dolor enim, ut eu lectus nam eget nibh. Ante illum nullam leo, vivamus aliquam massa
+  massainceptos fermentum porttitor, blandit vehicula, lorem in placerat ut aliquam at sociosqu. Vivamus duis
+  ultricies
+  aliquam placerat, tincidunt scelerisque imperdiet, egestas erat vel. Libero rerum. Donec ligula tristique, purus
+  montes,
+  feugiatid nunc in a nec. Duis odio, vitae sed etiam mi massa, laoreet amet purus amet rhoncus, eget sed, arcu
+  urna.
+  Maecenaswisi id, at donec enim. Proin nisl, pulvinar leo suspendisse, cum parturient non, congue leo et ut in,
+  neque ut
+  lacusauctor quam fermentum urna. Metus quis, mauris dictum aptent ultrices nulla viverra ornare, tempor elit enim
+  leo
+  donec,sed sed. Vivamus sapien facilisi, tempor arcu nulla justo sed et, eget suspendisse lacus sed nunc mattis
+  lectus.
+  Metusgravida.</p> -->
+
+<%- include("partials/footer.ejs") %>
